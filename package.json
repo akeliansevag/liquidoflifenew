@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "swiper": "^11.2.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "tailwind": "npx tailwindcss -i ./src/css/style.css -o ./dist/css/output.css --watch --minify",
+    "dev": "concurrently \"npm run tailwind\" \"npm run watch\""
+  }
+}
