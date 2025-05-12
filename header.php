@@ -7,7 +7,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16971662538"> </script>
@@ -25,6 +25,6 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<div id="wrapper" class="max-lg:pt-[var(--mobile-header-height)] lg:pt-[var(--header-height)]">
+	<div id="wrapper">
 		<?php get_template_part("components/mobileMenu"); ?>
 		<?php get_template_part("components/header"); ?>

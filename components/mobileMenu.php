@@ -15,10 +15,6 @@
             ]);
             ?>
         </div>
-        <div class="p-5">
-            <a href="https://www.eaulawater.com/" target="_blank">
-                <img src="<?= get_template_directory_uri() ?>/src/img/eaula.webp" width="92" height="30" alt="eaula">
-            </a>
-        </div>
+
     </div>
 </div>

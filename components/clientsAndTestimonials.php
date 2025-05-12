@@ -1,97 +1,67 @@
-<?php
-$clients = [
-    'aldar.webp',
-    'crank.webp',
-    'dess.webp',
-    'dosc.webp',
-    'dubai-chamber-of-commerce.webp',
-    'keolis.webp',
-    'masdar.webp',
-    'pacific-prime.webp',
-    'unnamed.webp'
-];
-?>
-<section class="bg-secondary lg:rounded-[96px] lg:mx-10">
+<section>
     <div class="container">
         <div>
-            <h2 class="section-title text-center">OUR CLIENTS</h2>
-            <div class="swiper mt-8" id="clients-slider">
-                <div class="swiper-wrapper items-center">
-                    <?php foreach ($clients as $client): ?>
-                        <div class="swiper-slide">
-                            <div class="flex justify-center items-center">
-                                <img class="max-lg:w-1/2" src="<?= get_template_directory_uri() ?>/src/img/clients/<?= $client ?>" alt="Client Logo" />
+            <h2 class="section-title">CLIENTS TESTIMONIALS</h2>
+            <div class="max-lg:mt-10 lg:mt-14 bg-primary relative rounded-xl px-10 max-lg:py-10 lg:py-16">
+
+                <div class="swiper lg:w-2/3" id="testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <?php foreach (get_field('testimonials') as $testimonial): ?>
+                            <div class="swiper-slide">
+                                <div class="text-white">
+                                    <h3 class="text-xl mb-5 font-bold"><?= $testimonial['name'] ?></h3>
+                                    <div>
+                                        <?= $testimonial['description'] ?>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+
+
+                    </div>
+                </div>
+
+                <div class="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-3">
+                    <div id="testimonial-prev" class="lg:absolute lg:top-1/2 lg:-translate-y-1/2 left-14">
+                        <button class="hover:opacity-80 previous-nav w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white rotate-180">
+                            <svg class="stroke-primary" width="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path class="fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="testimonial-next" class="lg:absolute lg:top-1/2 lg:-translate-y-1/2 right-14">
+                        <button class="hover:opacity-80 next-nav w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white">
+                            <svg class="stroke-primary" width="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="stroke">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path class="fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </div>
-            <div id="clients-slider-nav" class="flex justify-center my-10">
-                <?= get_template_part('components/swiperNav'); ?>
-            </div>
+
+
         </div>
+    </div>
+</section>
 
-
-        <div>
-            <h2 class="section-title text-center pt-12">CLIENTS TESTIMONIALS</h2>
-            <div class="swiper mt-14" id="testimonials-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial">
-                            <h3>Adrienne Doolan</h3>
-                            <div class="text-lg">
-                                <p>
-                                    Working with Liquid of Life for nearly a decade has been an incredible journey of sustainability and innovation.
-                                    As a long-standing corporate partner, I’ve witnessed their unwavering commitment to providing sustainable, high-quality water solutions that aligned with our environment goals.
-                                </p>
-                                <p>
-                                    On a personal level, I’ve also have the privilege of experiencing
-                                    the benefits of their filtered water solutions at home. Having access to clean, safe and great tasting water has been a game changer
-                                    for my family and me. It’s reassuring to know that we’re contributing to a healthier planet by reducing our reliance on single-use plastics while enjoying superior water quality.
-                                </p>
-                                <p>
-                                    Liquid of Life truly exemplifies what it means to combine sustainability with practicality. Their expertise and passion for what they do are evident in every interaction, making them a trusted partner and solution provider.
-                                </p>
-                                <p class="text-primary !mb-0">
-                                    Founder of Sustain Global SME Impact Platform, CEO Green Touches, Board Member of UN Global Compact Local Network UAE
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial">
-                            <div class="flex max-lg:flex-col gap-1">
-                                <h3>Beverley Wylie <span> - </span> <span class="text-xl text-primary uppercase">Founder of Wellness We Need</span></h3>
-
-
-                            </div>
-
-                            <div class="text-lg">
-                                <p>
-                                    As a lifestyle and wellness professional, health and sustainability are at the heart of everything I do, both personally and professionally. That’s why working with Liquid of Life has been such a rewarding experience over the years. Their filtered water solutions perfectly align with my commitment to promoting well-being and eco-conscious living.
-
-                                </p>
-                                <p>
-                                    At home, having access to clean, pure, and great-tasting water has been a game changer. It’s not just about hydration—it’s about feeling confident in the quality of what we’re consuming and knowing we’re making a positive choice for the environment.
-
-                                </p>
-                                <p class="!mb-0">
-                                    Liquid of Life goes beyond providing a product; they deliver
-                                    a way of life that empowers individuals and businesses
-                                    to embrace sustainability without compromising on quality
-                                    or convenience. Their passion and expertise have been
-                                    a constant source of inspiration, and I wholeheartedly recommend their solutions to anyone looking to enhance their health and environmental impact.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
+<section>
+    <div class="container">
+        <div class="flex items-center justify-center gap-12 flex-wrap">
+            <?php foreach (get_field('clients') as $client): ?>
+                <div class="max-lg:w-[100px] lg:w-[150px]">
+                    <img class="w-full" src="<?= $client['url'] ?>" alt="<?= $client['alt'] ?>" />
                 </div>
-
-                <div id="testimonials-swiper-navigation" class="swiper-pagination !relative mt-10"></div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

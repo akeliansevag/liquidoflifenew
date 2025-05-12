@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "DM Sans", serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -21,7 +21,7 @@ p {
 }
 
 section {
-  @apply py-16;
+  @apply max-lg:py-10 lg:py-16;
 }
 
 .section-title {
@@ -36,40 +36,20 @@ body.open #mobile-menu-content {
   @apply translate-x-0;
 }
 
+header {
+  @apply transition-all;
+}
+
+header.scrolled {
+  @apply bg-white/90 backdrop-blur-sm shadow-sm;
+}
+
 .mobile-menu > li {
   @apply px-5 py-3 border-b opacity-70;
 }
 
-#home-banner .banner-swiper-pagination {
-  @apply absolute z-10 inline-flex flex-col justify-center w-auto h-auto bottom-auto top-1/2 -translate-y-1/2 left-[10%] gap-[var(--homebanner-separator-gap)] max-sm:flex-row max-sm:left-1/2 -translate-x-1/2 max-sm:translate-y-0 max-sm:top-auto max-sm:bottom-[30px];
-}
-
-#home-banner .swiper-pagination-bullet {
-  @apply rounded-full bg-transparent border border-white h-[42px] w-[42px] opacity-100 text-white inline-flex items-center justify-center relative m-0;
-}
-
-#home-banner .swiper-pagination-bullet-active {
-  @apply bg-white text-black font-bold;
-}
-
-#home-banner .swiper-pagination-bullet div {
-  @apply bg-white border-white h-[var(--homebanner-separator-gap)] w-[1px] absolute top-full max-sm:h-[1px] max-sm:w-[var(--homebanner-separator-gap)] max-sm:top-1/2 max-sm:-translate-y-1/2 max-sm:left-full;
-}
-
-#home-banner .swiper-pagination-bullet:last-child div {
-  @apply hidden;
-}
-
 .overlay {
   @apply w-full h-full top-0 left-0 absolute bg-black bg-opacity-10 z-10;
-}
-
-.testimonial {
-  @apply bg-white max-lg:rounded-lg lg:rounded-[65px] max-lg:p-8 lg:p-14;
-}
-
-.testimonial h3 {
-  @apply uppercase text-xl font-extrabold mb-4;
 }
 
 .contact-form input,
@@ -109,4 +89,8 @@ body.open #mobile-menu-content {
 .faq-answer.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.about-us-icon svg {
+  @apply w-[60px];
 }

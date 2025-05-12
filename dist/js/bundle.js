@@ -1341,37 +1341,19 @@ const productsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
-const clientsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('#clients-slider', {
-  autoplay: true,
-  navigation: {
-    prevEl: '#clients-slider-nav button.previous-nav',
-    nextEl: '#clients-slider-nav button.next-nav'
-  },
-  slidesPerView: 2,
-  spaceBetween: 10,
-  loop: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 3 
-    },
-    1024: {
-      slidesPerView: 4
-    }
-  }
-});
 
 const testimonialsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('#testimonials-slider', {
   autoplay: true,
-  pagination: {
-    el: '#testimonials-swiper-navigation',
-    clickable: true
+  navigation: {
+    prevEl: '#testimonial-prev',
+    nextEl: '#testimonial-next'
   },
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
   breakpoints: {
     1199: {
-      slidesPerView: 2
+      slidesPerView: 1
     },
   }
 });
@@ -12018,6 +12000,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+var header = document.querySelector('header');
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
 })();
 
 /******/ })()

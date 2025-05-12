@@ -1,48 +1,41 @@
 <section>
     <div class="container">
-        <h2 class="section-title">FAQ's</h2>
-        <div class="mt-8 grid max-lg:grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="max-lg:h-[400px] w-full overflow-hidden rounded-[96px] relative">
-                <img class="absolute w-full h-full object-cover top-0 left-0" src="<?= get_template_directory_uri() ?>/src/img/drinking-water.webp" alt="Girl Drinking Water" />
-            </div>
-            <div class="flex flex-col gap-6">
-                <a href="" class="rounded-[96px] flex flex-col lg:gap-8 bg-secondary max-lg:p-12 lg:p-16">
-                    <div>
-                        <svg class="max-lg:w-[50px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.184" height="94.754" viewBox="0 0 61.184 94.754">
-                            <defs>
-                                <clipPath id="clip-path">
-                                    <rect id="Rectangle_187" data-name="Rectangle 187" width="61.184" height="94.754" transform="translate(0 0)" fill="#03bdd0" stroke="#00bccf" stroke-width="2" />
-                                </clipPath>
-                            </defs>
-                            <g id="Group_455" data-name="Group 455" transform="translate(0 0)" clip-path="url(#clip-path)">
-                                <path id="Path_198" data-name="Path 198" d="M7.918,0H53.266a7.948,7.948,0,0,1,7.918,7.918V86.836a7.948,7.948,0,0,1-7.918,7.918l-45.348,0A7.948,7.948,0,0,1,0,86.832V7.918A7.948,7.948,0,0,1,7.918,0ZM21.484,6.949h-.051a1.106,1.106,0,0,0,0,2.211h.051a1.106,1.106,0,0,0,0-2.211m9.136,0h-.05a1.106,1.106,0,1,0,0,2.211h.05a1.106,1.106,0,1,0,0-2.211m9.137,0h-.051a1.106,1.106,0,0,0,0,2.211h.051a1.106,1.106,0,1,0,0-2.211M15.452,68.109H45.725a1.105,1.105,0,1,0,0-2.211H15.452a1.105,1.105,0,0,0,0,2.211M41.737,25.488v4.641a1.105,1.105,0,0,1-2.211,0V25.488H21.682v4.641a1.105,1.105,0,0,1-2.211,0V25.488h-6.59V54H47.932V25.488ZM10.639,54V24.942L2.217,18.88V54.005ZM50.123,25.1V54.012h8.82l0-35.145L50.127,25.1ZM4.545,17.836l7.559,5.43H48.881l7.695-5.429ZM2.221,15.614H58.959v-7.7a5.709,5.709,0,0,0-5.691-5.691l-45.352,0A5.709,5.709,0,0,0,2.224,7.915V15.61ZM58.955,56.223H2.221v4.558H58.959V56.223Zm0,6.781H2.221v23.82a5.709,5.709,0,0,0,5.691,5.691H53.26a5.709,5.709,0,0,0,5.692-5.691V63Z" fill="#03bdd0" stroke="#00bccf" stroke-width="2" fill-rule="evenodd" />
-                            </g>
-                        </svg>
-                    </div>
-
-                    <h3 class="font-semibold max-lg:text-2xl lg:text-5xl">Bottle-free dispensers</h3>
+        <h2 class="section-title">FAQs</h2>
+        <div class="mt-10 lg:flex lg:justify-end relative w-full rounded-xl overflow-hidden lg:py-32 lg:px-32 max-lg:py-10 max-lg:px-10">
+            <img class="absolute -z-10 top-0 left-0 object-cover w-full h-full" src="<?= get_template_directory_uri() ?>/src/img/faq-bg.webp" alt="FAQ Background Image" />
+            <div class="flex flex-col gap-5 lg:w-1/3">
+                <a href="/faqs" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
+                    <span>
+                        Bottle-Free Dispensers
+                    </span>
+                    <span>
+                        <button class="w-[30px] h-[30px] rounded-full flex items-center justify-center bg-white">
+                            <svg class="stroke-primary" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="stroke">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path class="fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </span>
                 </a>
 
-                <a href="" class="rounded-[96px] flex flex-col lg:gap-8 bg-secondary max-lg:p-12 lg:p-16">
-                    <div>
-                        <svg class="max-lg:w-[75px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115.815" height="88.812" viewBox="0 0 115.815 88.812">
-                            <defs>
-                                <clipPath id="clip-path2">
-                                    <rect id="Rectangle_188" data-name="Rectangle 188" width="115.815" height="88.812" fill="#00bccf" />
-                                </clipPath>
-                            </defs>
-                            <g id="Group_457" data-name="Group 457" clip-path="url(#clip-path2)">
-                                <path id="Path_199" data-name="Path 199" d="M115.773,28.067c-.442-4.328-8.169-6.5-15.448-7.139v-4.6a1.844,1.844,0,0,0-1.844-1.844H97.105V8.031a1.844,1.844,0,0,0-1.844-1.844H65.054A7.61,7.61,0,0,0,57.795,0H19.514a7.612,7.612,0,0,0-7.259,6.187H8.835a1.844,1.844,0,1,0,0,3.688h3.42a8.323,8.323,0,0,0,.988,2.5H1.844A1.844,1.844,0,0,0,0,14.215V26.3a1.844,1.844,0,0,0,1.844,1.844h8.609v3.9H9.609a3.237,3.237,0,0,0-3.354,3.108v5.338c0,1.522,1.288,2.248,2.72,2.639v36.7c0,4.77,4.323,8.682,9.753,8.96a1.844,1.844,0,0,0,.24.017c.039,0,.077,0,.115-.006.088,0,.175.006.264.006,5.717,0,10.367-4.028,10.364-8.978v-36.7c1.435-.39,2.727-1.114,2.727-2.64V35.153a3.242,3.242,0,0,0-3.354-3.108h-.843v-3.9h14.05v3.9H41.45a3.238,3.238,0,0,0-3.356,3.108v5.338c0,1.523,1.291,2.249,2.724,2.64v36.7c0,4.77,4.321,8.682,9.75,8.96a1.844,1.844,0,0,0,.24.017c.039,0,.077,0,.115-.006.088,0,.175.006.264.006,5.717,0,10.367-4.028,10.367-8.978V43.13c1.434-.39,2.724-1.115,2.724-2.639V35.153a3.243,3.243,0,0,0-3.356-3.108h-.841v-3.9H68.69A1.844,1.844,0,0,0,70.534,26.3V14.215a1.844,1.844,0,0,0-1.844-1.844H64.066a8.31,8.31,0,0,0,.988-2.5H93.417v4.606H92.038a1.844,1.844,0,0,0-1.844,1.844v4.6c-7.387.644-15.238,2.868-15.474,7.327a1.883,1.883,0,0,0-.012.205V76.714c0,5.66,8.837,9.929,20.554,9.929s20.554-4.269,20.554-9.929V28.46a1.838,1.838,0,0,0-.043-.392M12.663,79.834V43.695q2.225.214,4.46.273V84.81c-2.569-.743-4.46-2.721-4.46-4.976m8.149,5.153v-41q2.61-.039,5.21-.287V79.834c0,2.469-2.268,4.607-5.21,5.153M28.75,39.564c-.271.073-.63.146-1.064.218a1.831,1.831,0,0,0-.216.035,56.5,56.5,0,0,1-8.124.485,56.4,56.4,0,0,1-8.133-.485A1.775,1.775,0,0,0,11,39.782c-.431-.072-.788-.146-1.059-.218V35.733H28.75Zm-4.2-7.519H14.141v-3.9H24.552ZM44.507,79.834V43.7q2.224.213,4.458.273V84.809c-2.568-.744-4.458-2.722-4.458-4.975m8.146,5.153v-41q2.611-.039,5.213-.288V79.834c0,2.47-2.269,4.608-5.213,5.153M60.59,39.564c-.272.073-.632.147-1.066.218a1.818,1.818,0,0,0-.205.033,56.35,56.35,0,0,1-8.132.486,56.487,56.487,0,0,1-8.124-.484,1.841,1.841,0,0,0-.223-.036c-.431-.072-.788-.145-1.058-.218V35.733H60.59Zm-4.2-7.519H45.979v-3.9H56.393Zm10.453-7.588H3.688v-8.4H66.846ZM19.514,12.371a4.089,4.089,0,0,1-3.772-4.34,4.092,4.092,0,0,1,3.772-4.342H57.795a4.093,4.093,0,0,1,3.772,4.342,4.091,4.091,0,0,1-3.772,4.34Zm89.35,14c2.665.991,3.243,1.913,3.243,2.093s-.718,1.323-4.18,2.415a37.046,37.046,0,0,1-7.6,1.418V24.636a34.528,34.528,0,0,1,8.54,1.738M93.882,22.768a1.861,1.861,0,0,0,0-.223c0-.008,0-.015,0-.024V18.179h2.754v4.2c-.008.054-.014.108-.017.163a1.868,1.868,0,0,0,.017.374v9.589c-.459.011-.919.018-1.384.018s-.916-.007-1.37-.018ZM81.639,26.374a34.674,34.674,0,0,1,8.555-1.739V32.3a37.071,37.071,0,0,1-7.618-1.42c-3.442-1.092-4.18-2.238-4.18-2.415s.578-1.1,3.243-2.093m13.622,56.58c-10.45,0-16.866-3.634-16.866-6.241V33.144c3.972,2.083,10.571,3.063,16.866,3.063s12.9-.982,16.866-3.066V76.714c0,2.609-6.415,6.241-16.866,6.241" fill="#00bccf" />
-                                <path id="Path_200" data-name="Path 200" d="M356.741,180.051a1.844,1.844,0,0,0-3.6,0c-1.1,5.075-3.344,8.781-5.326,12.049-1.854,3.061-3.46,5.707-3.46,8.594,0,7.389,4.057,11.977,10.588,11.977s10.6-4.588,10.586-11.977c0-2.887-1.6-5.533-3.457-8.594a37.445,37.445,0,0,1-5.326-12.049m-1.8,28.932c-6,0-6.9-5.193-6.9-8.289,0-1.856,1.291-3.976,2.926-6.681a56.355,56.355,0,0,0,3.974-7.473,55.817,55.817,0,0,0,3.961,7.473c1.633,2.695,2.924,4.824,2.924,6.681,0,3.1-.883,8.289-6.885,8.289" transform="translate(-259.677 -134.681)" fill="#00bccf" />
-                            </g>
-                        </svg>
-                    </div>
-
-
-
-
-
-                    <h3 class="font-semibold max-lg:text-2xl lg:text-5xl">Under-the-sink filtration systems</h3>
+                <a href="/faqs" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
+                    <span>
+                        Under-The-Sink Filtration Systems
+                    </span>
+                    <span>
+                        <button class="w-[30px] h-[30px] rounded-full flex items-center justify-center bg-white">
+                            <svg class="stroke-primary" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="stroke">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path class="fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="#ffffff"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </span>
                 </a>
             </div>
         </div>
