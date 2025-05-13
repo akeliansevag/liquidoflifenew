@@ -1,6 +1,7 @@
 import './menu';
 import './swiper';
 import './faq';
+import './popup';
 
 var header = document.querySelector('header');
 

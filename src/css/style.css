@@ -109,3 +109,34 @@ header.scrolled {
   margin-right: 8px;
   vertical-align: middle;
 }
+
+#popup {
+  @apply fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center -translate-x-full;
+}
+
+#popup.show {
+  @apply translate-x-0;
+}
+
+.popup-overlay {
+  @apply absolute top-0 left-0 w-full h-full bg-white/20 backdrop-blur-sm transition-all opacity-0;
+}
+
+.popup-box {
+  @apply bg-white relative rounded-3xl max-w-[900px] w-full max-lg:px-7 max-lg:py-10 max-lg:pt-14 lg:p-16 z-10 overflow-y-hidden mx-10 transition-all -translate-y-10;
+}
+.popup-content {
+  @apply overflow-y-auto max-h-[80vh];
+}
+
+#popup-close {
+  @apply absolute top-5 right-5 w-[30px] h-[30px] rounded-full bg-primary flex items-center justify-center cursor-pointer hover:opacity-80;
+}
+
+#popup.show .popup-overlay {
+  @apply opacity-100;
+}
+
+#popup.show .popup-box {
+  @apply translate-y-0;
+}

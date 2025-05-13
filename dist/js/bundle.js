@@ -1298,6 +1298,51 @@ const closeMenu = () => bodyEl.classList.remove('open');
 
 /***/ }),
 
+/***/ "./src/js/popup.js":
+/*!*************************!*\
+  !*** ./src/js/popup.js ***!
+  \*************************/
+/***/ (() => {
+
+document.querySelectorAll('.solution-open-popup').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetId = button.dataset.targetId;
+
+    
+    document.querySelector("#"+targetId).classList.remove('hidden');
+    openPopup();
+
+  });
+});
+
+// Pressing ESC key closes popup
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePopup();
+  }
+});
+
+document.querySelector('.popup-overlay').addEventListener('click',()=>{
+    closePopup();
+});
+
+document.querySelector("#popup-close").addEventListener("click",()=>{
+    closePopup();
+});
+
+const closePopup = () => {
+    document.getElementById('popup').classList.remove('show');
+    document.querySelectorAll('.solution-popup-content').forEach(item => {
+        item.classList.add('hidden');
+    })
+}
+
+const openPopup = () => {
+    document.getElementById('popup').classList.add('show');
+}
+
+/***/ }),
+
 /***/ "./src/js/swiper.js":
 /*!**************************!*\
   !*** ./src/js/swiper.js ***!
@@ -11997,6 +12042,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiper */ "./src/js/swiper.js");
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faq */ "./src/js/faq.js");
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_faq__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popup */ "./src/js/popup.js");
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_popup__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

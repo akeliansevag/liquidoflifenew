@@ -70,4 +70,5 @@ $products = $query->posts;
         </div>
     </div>
 </section>
+<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
