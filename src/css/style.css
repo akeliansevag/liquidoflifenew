@@ -140,3 +140,7 @@ header.scrolled {
 #popup.show .popup-box {
   @apply translate-y-0;
 }
+
+.faq-answer ul {
+  @apply list-disc pl-6;
+}
