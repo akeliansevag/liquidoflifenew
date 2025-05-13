@@ -1304,6 +1304,9 @@ const closeMenu = () => bodyEl.classList.remove('open');
   \*************************/
 /***/ (() => {
 
+const popupOverlay = document.querySelector('.popup-overlay');
+const popupClose = document.querySelector('#popup-close');
+
 document.querySelectorAll('.solution-open-popup').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.dataset.targetId;
@@ -1322,13 +1325,18 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-document.querySelector('.popup-overlay').addEventListener('click',()=>{
-    closePopup();
-});
+if(popupOverlay){
+    popupOverlay.addEventListener('click',()=>{
+        closePopup();
+    });
+}
 
-document.querySelector("#popup-close").addEventListener("click",()=>{
-    closePopup();
-});
+if(popupClose){
+    popupClose.addEventListener("click",()=>{
+        closePopup();
+    });
+}
+
 
 const closePopup = () => {
     document.getElementById('popup').classList.remove('show');
