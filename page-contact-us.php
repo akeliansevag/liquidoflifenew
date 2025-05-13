@@ -4,14 +4,29 @@
     <div class="container">
         <h1 class="section-title">We Would Love To Hear From You!</h1>
         <h2 class="text-lg mt-3">Questions? Comments? Let us hear what you have to say and learn how we can assist you.</h2>
+        <div class="flex lg:justify-end mt-10">
+            <div class="max-lg:w-full lg:w-1/2 flex gap-4">
+                <div id="residential" class="w-full active lol-button">
+                    Residential
+                </div>
+                <div id="corporate" class="w-full lol-button">
+                    Corporate
+                </div>
+            </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden grid lg:grid-cols-2 max-lg:grid-cols-1 mb-14 mt-8">
 
-        <div class="rounded-2xl overflow-hidden grid lg:grid-cols-2 max-lg:grid-cols-1 my-14">
-
-            <div class="overflow-hidden max-lg:aspect-square relative">
+            <div class="max-lg:order-1 overflow-hidden max-lg:aspect-square relative">
                 <img src="<?= get_template_directory_uri() ?>/src/img/drinking-water-2.webp" alt="Girl Drinking Water" class="absolute top-0 left-0 object-cover h-full w-full" />
             </div>
             <div class="bg-secondary max-lg:p-4 lg:p-8 pb-0">
-                <?= do_shortcode('[contact-form-7 id="a4fb7e2" title="Contact us" html_class="contact-form"]'); ?>
+                <div id="residential-form">
+                    <?= do_shortcode('[contact-form-7 id="a4fb7e2" title="Contact us" html_class="contact-form"]'); ?>
+                </div>
+                <div id="corporate-form" class="hidden">
+                    <?= do_shortcode('[contact-form-7 id="3154181" title="Contact us corporate" html_class="contact-form"]'); ?>
+                </div>
+
             </div>
         </div>
         <div class="rounded-2xl overflow-hidden my-10 h-[35vh]">

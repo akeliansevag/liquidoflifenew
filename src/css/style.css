@@ -144,3 +144,11 @@ header.scrolled {
 .faq-answer ul {
   @apply list-disc pl-6;
 }
+
+.lol-button {
+  @apply rounded-2xl border border-primary text-center py-4 px-4 hover:opacity-70 cursor-pointer;
+}
+
+.lol-button.active {
+  @apply bg-primary text-white font-bold;
+}
