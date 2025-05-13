@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?= get_template_part('/components/smallBanner'); ?>
 <section>
     <div class="container">
         <h1 class="section-title"><?= get_the_title(); ?></h1>

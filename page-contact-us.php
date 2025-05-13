@@ -1,21 +1,25 @@
 <?php get_header(); ?>
+<?= get_template_part('/components/smallBanner'); ?>
 <section>
     <div class="container">
-        <h1 class="section-title uppercase text-center">We would love to hear from you!</h1>
-        <h2 class="text-center text-lg">Questions? Comments? Let us hear what you have to say and learn how we can assist you.</h2>
+        <h1 class="section-title">We Would Love To Hear From You!</h1>
+        <h2 class="text-lg mt-3">Questions? Comments? Let us hear what you have to say and learn how we can assist you.</h2>
 
-        <div class="grid lg:grid-cols-2 max-lg:grid-cols-1 gap-4 my-14">
-            <div class="bg-secondary rounded-3xl max-lg:p-4 lg:p-8 pb-0">
+        <div class="rounded-2xl overflow-hidden grid lg:grid-cols-2 max-lg:grid-cols-1 my-14">
+
+            <div class="overflow-hidden max-lg:aspect-square relative">
+                <img src="<?= get_template_directory_uri() ?>/src/img/drinking-water-2.webp" alt="Girl Drinking Water" class="absolute top-0 left-0 object-cover h-full w-full" />
+            </div>
+            <div class="bg-secondary max-lg:p-4 lg:p-8 pb-0">
                 <?= do_shortcode('[contact-form-7 id="a4fb7e2" title="Contact us" html_class="contact-form"]'); ?>
             </div>
-            <div class="rounded-3xl overflow-hidden max-lg:aspect-square">
-                <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35241.86312194314!2d55.231229!3d25.049339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6fe1f1ef851d%3A0x92e94ffeafc3cec8!2sControl%20Tower!5e1!3m2!1sen!2sus!4v1737396493370!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
         </div>
-        <div>
-            <h3 class="section-title uppercase">get in touch</h3>
-            <h4 class="uppercase text-2xl">Liquid of Life LLC</h4>
-            <div class="mt-4 flex lg:items-center max-lg:flex-col flex-wrap gap-4 max-w-[500px]">
+        <div class="rounded-2xl overflow-hidden my-10 h-[35vh]">
+            <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35241.86312194314!2d55.231229!3d25.049339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6fe1f1ef851d%3A0x92e94ffeafc3cec8!2sControl%20Tower!5e1!3m2!1sen!2sus!4v1737396493370!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="flex max-lg:flex-col items-center gap-10 border border-primary rounded-2xl lg:px-10 lg:py-10 max-lg:px-5 max-lg:py-5">
+            <h3 class="section-title">Get In Touch</h3>
+            <div class="flex lg:items-center max-lg:flex-col flex-wrap gap-10">
                 <div class="flex items-center gap-1">
                     <a target="_blank" href="https://wa.me/97143607064">
                         <svg id="Group_466" data-name="Group 466" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" viewBox="0 0 45.88 46.481">
