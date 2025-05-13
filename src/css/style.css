@@ -94,3 +94,18 @@ header.scrolled {
 .about-us-icon svg {
   @apply w-[60px];
 }
+
+.add-on-content ul li {
+  @apply text-primary font-bold mb-2 flex items-center;
+}
+.add-on-content ul li::before {
+  content: "";
+  display: inline-block;
+  width: 24.699px;
+  height: 24.065px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24.699" height="24.065" viewBox="0 0 24.699 24.065"><defs><clipPath id="clip-path"><path d="M0,0H24.7V-24.065H0Z" fill="%2300b4c5"/></clipPath></defs><g transform="translate(0 24.065)"><g clip-path="url(%23clip-path)"><g transform="translate(20.868 -16.32)"><path d="M0,0A9.892,9.892,0,0,1,.988,4.288a9.848,9.848,0,0,1-9.824,9.823,9.848,9.848,0,0,1-9.823-9.823A9.849,9.849,0,0,1-8.836-5.535a9.7,9.7,0,0,1,5.9,1.975c.6-.442,1.2-.91,1.845-1.326a12.052,12.052,0,0,0-7.77-2.858A12.05,12.05,0,0,0-20.868,4.288,12.055,12.055,0,0,0-8.836,16.32,12.056,12.056,0,0,0,3.2,4.288,11.949,11.949,0,0,0,1.585-1.689C1.066-1.2.546-.624,0,0" fill="%2300b4c5"/></g><g transform="translate(11.695 -12.266)"><path d="M0,0A36.022,36.022,0,0,1,12.11-10.135c.65-.312,1.222.649.676,1.117C9.979-6.445,5.951-2.911,1.169,6.185a1.35,1.35,0,0,1-2.39,0L-5.743-2.287a.923.923,0,0,1,.312-1.221l.6-.416a.905.905,0,0,1,1.118.1Z" fill="%2300b4c5"/></g></g></g></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  vertical-align: middle;
+}

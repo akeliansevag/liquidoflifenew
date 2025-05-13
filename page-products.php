@@ -12,54 +12,59 @@ $query = new WP_Query([
 ]);
 $products = $query->posts;
 ?>
+<?= get_template_part('/components/banner'); ?>
 <section>
     <div class="container">
-        <h1 class="section-title uppercase mb-10"><?= get_the_title(); ?></h1>
         <div class="flex flex-col gap-20">
             <?php foreach ($products as $product): ?>
                 <div>
-                    <div class="grid max-lg:grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div class="relative min-h-[350px] rounded-[65px] overflow-hidden">
+                    <h2 class="section-title"><?= $product->post_title ?></h2>
+                    <div class="mt-4 lg:max-w-[50%]">
+                        <?= $product->post_content ?>
+                    </div>
+                    <div class="grid lg:grid-cols-2 max-lg:grid-cols-1 gap-5 mt-10">
+                        <div class="relative">
+                            <?php if (get_field('best_seller', $product->ID)): ?>
+                                <div class="rounded-lg absolute top-10 xl:left-10 max-xl:left-1/2 max-xl:-translate-x-1/2 text-white bg-black py-3 px-4 font-bold uppercase">
+                                    Best Seller
+                                </div>
+                            <?php endif; ?>
                             <?=
                             get_the_post_thumbnail(
                                 $product->ID,
-                                'featured-medium',
+                                '',
                                 [
-                                    'class' => 'absolute top-0 left-0 object-cover w-full h-full'
+                                    'class' => 'rounded-2xl'
                                 ]
                             );
                             ?>
                         </div>
-                        <div class="bg-secondary rounded-[65px] max-lg:p-8 lg:p-12">
-                            <h2 class="mb-3 text-2xl font-bold"><?= $product->post_title; ?></h2>
-                            <div>
-                                <?= $product->post_content; ?>
+                        <?php if (get_field("add_on", $product->ID)): ?>
+                            <div class="flex flex-col gap-5">
+                                <?php foreach (get_field("add_on", $product->ID) as $add): ?>
+                                    <div class="bg-[#F9F9FB] overflow-hidden relative max-lg:min-h-[200px] rounded-2xl lg:items-center flex max-lg:flex-col  gap-10 w-full max-lg:p-5 lg:p-10 lg:h-full add-on-content">
+                                        <?php if ($add['info']): ?>
+                                            <div>
+                                                <div><?= $add['info'] ?></div>
+                                                <?php if ($add['price']): ?>
+                                                    <p class="text-primary font-bold"><?= $add['price'] ?></p>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <?php if ($add['info'] && $add['image']): ?>
+                                            <div>
+                                                <img class="mb-3" src="<?= $add['image']['sizes']['content-small'] ?>" alt="add on image">
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if (!$add['info'] && $add['image']): ?>
+                                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?= $add['image']['url'] ?>" alt="add on image">
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
-
-                    <?php if (get_field('additional_info', $product->ID) || get_field('add_on', $product->ID)): ?>
-                        <div class="flex gap-4 max-lg:flex-col mt-4">
-                            <?php if (get_field('additional_info', $product->ID)): ?>
-                                <div class="bg-secondary rounded-[65px] max-lg:p-8 lg:p-12 lg:w-1/3">
-                                    <?= get_field('additional_info', $product->ID); ?>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if (get_field('add_on', $product->ID)): ?>
-                                <div class="bg-secondary rounded-[65px] max-lg:p-8 lg:p-12 flex max-lg:flex-col max-lg:gap-8 lg:gap-24 lg:w-2/3">
-                                    <h4 class="font-bold">Add On</h4>
-                                    <?php $add_ons = get_field("add_on", $product->ID); ?>
-                                    <?php foreach ($add_ons as $addon): ?>
-                                        <div>
-                                            <img class="mb-3" src="<?= $addon['image']['sizes']['content-small'] ?>" alt="add on image">
-                                            <?= $addon['info']; ?>
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
             <?php endforeach; ?>
         </div>
