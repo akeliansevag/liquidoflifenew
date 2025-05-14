@@ -1277,6 +1277,94 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 /***/ }),
 
+/***/ "./src/js/formPopup.js":
+/*!*****************************!*\
+  !*** ./src/js/formPopup.js ***!
+  \*****************************/
+/***/ (() => {
+
+const formPopupOverlay = document.querySelector('.form-popup-overlay');
+const formPopupClose = document.querySelector('#form-popup-close');
+
+// Pressing ESC key closes popup
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closePopup();
+    }
+});
+
+if (formPopupOverlay) {
+    formPopupOverlay.addEventListener('click', () => {
+        closePopup();
+    });
+}
+
+if (formPopupClose) {
+    formPopupClose.addEventListener("click", () => {
+        closePopup();
+    });
+}
+
+
+const closePopup = () => {
+    document.getElementById('form-popup').classList.remove('show');
+    sessionStorage.setItem('popupAlreadyShown', 'true');
+}
+
+const openPopup = () => {
+    document.getElementById('popup').classList.add('show');
+}
+
+
+const formResidential = document.getElementById('form-residential');
+const formCorporate = document.getElementById('form-corporate');
+
+if (formResidential) {
+    formResidential.addEventListener('click', () => {
+        formCorporate.classList.remove('active');
+        formResidential.classList.add('active');
+
+        document.getElementById('popup-corporate-form').classList.add('hidden');
+        document.getElementById('popup-residential-form').classList.remove('hidden');
+    })
+}
+
+if (formCorporate) {
+    formCorporate.addEventListener('click', () => {
+        formResidential.classList.remove('active');
+        formCorporate.classList.add('active');
+
+        document.getElementById('popup-residential-form').classList.add('hidden');
+        document.getElementById('popup-corporate-form').classList.remove('hidden');
+    })
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.getElementById('form-popup');
+
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.php';
+    const hasSubmitted = localStorage.getItem('popupFormSubmitted') === 'true';
+    const popupAlreadyShown = sessionStorage.getItem('popupAlreadyShown') === 'true';
+
+    if (isHomepage && !hasSubmitted && !popupAlreadyShown) {
+        setTimeout(() => {
+            popup.classList.add('show');
+            sessionStorage.setItem('popupAlreadyShown', 'true'); // Don't show again in this session
+        }, 3000); // 5 seconds
+    }
+
+    // On Contact Form 7 submission
+    document.addEventListener('wpcf7mailsent', function (event) {
+        if (popup.contains(event.target)) {
+            popup.classList.remove('show');
+            localStorage.setItem('popupFormSubmitted', 'true'); // Never show again
+        }
+    }, false);
+});
+
+/***/ }),
+
 /***/ "./src/js/menu.js":
 /*!************************!*\
   !*** ./src/js/menu.js ***!
@@ -1285,16 +1373,21 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 const burgerBtn = document.querySelector('#burger-btn');
 const menuCloseBtn = document.querySelector('#menu-close-btn');
-const bodyEl  = document.querySelector('body');
+const bodyEl = document.querySelector('body');
 const menuOverlay = document.querySelector('#mobile-menu-overlay');
+const menuContent = document.querySelector('#mobile-menu-content');
 
-burgerBtn.addEventListener('click',() => openMenu());
+burgerBtn.addEventListener('click', () => openMenu());
 menuCloseBtn.addEventListener('click', () => closeMenu());
-menuOverlay.addEventListener('click',() => closeMenu());
+menuOverlay.addEventListener('click', () => closeMenu());
 
 const openMenu = () => bodyEl.classList.add('open');
 const closeMenu = () => bodyEl.classList.remove('open');
 
+const menuLinks = menuContent.querySelectorAll('a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => closeMenu());
+});
 
 /***/ }),
 
@@ -12052,6 +12145,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_faq__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popup */ "./src/js/popup.js");
 /* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_popup__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _formPopup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./formPopup */ "./src/js/formPopup.js");
+/* harmony import */ var _formPopup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_formPopup__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -12070,8 +12166,8 @@ window.addEventListener("scroll", () => {
 const residential = document.getElementById('residential');
 const corporate = document.getElementById('corporate');
 
-if(residential){
-    residential.addEventListener('click',()=>{
+if (residential) {
+    residential.addEventListener('click', () => {
         corporate.classList.remove('active');
         residential.classList.add('active');
 
@@ -12080,8 +12176,8 @@ if(residential){
     })
 }
 
-if(corporate){
-    corporate.addEventListener('click',()=>{
+if (corporate) {
+    corporate.addEventListener('click', () => {
         residential.classList.remove('active');
         corporate.classList.add('active');
 
@@ -12089,6 +12185,46 @@ if(corporate){
         document.getElementById('corporate-form').classList.remove('hidden');
     })
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const OFFSET = 100;
+
+    function scrollToHash(hash) {
+        if (!hash) return;
+        const id = hash.startsWith('#') ? hash : '#' + hash.split('#')[1];
+        const target = document.querySelector(id);
+        if (target) {
+            const top = target.getBoundingClientRect().top + window.scrollY - OFFSET;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+    }
+
+    // On initial load with hash
+    if (window.location.hash) {
+        setTimeout(() => {
+            scrollToHash(window.location.hash);
+        }, 100);
+    }
+
+    // Intercept all clicks on links with hashes (even full URLs)
+    document.querySelectorAll('a[href*="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const url = new URL(this.href);
+            const currentUrl = window.location;
+
+            // Same page hash link
+            if (
+                url.pathname === currentUrl.pathname &&
+                url.hostname === currentUrl.hostname &&
+                url.hash
+            ) {
+                e.preventDefault(); // prevent default jump
+                history.pushState(null, null, url.hash); // update URL without reload
+                scrollToHash(url.hash);
+            }
+        });
+    });
+});
 })();
 
 /******/ })()

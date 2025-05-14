@@ -1,4 +1,4 @@
-<section>
+<section id="our-clients">
     <div class="container">
         <div>
             <h2 class="section-title">CLIENTS TESTIMONIALS</h2>

@@ -17,7 +17,7 @@ $products = $query->posts;
     <div class="container">
         <div class="flex flex-col gap-20">
             <?php foreach ($products as $product): ?>
-                <div>
+                <div id="<?= $product->post_name ?>">
                     <h2 class="section-title"><?= $product->post_title ?></h2>
                     <div class="mt-4 lg:max-w-[50%]">
                         <?= $product->post_content ?>

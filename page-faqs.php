@@ -11,7 +11,7 @@ $faq_categories = get_terms([
         <h1 class="section-title"><?= the_title(); ?></h1>
         <div class="flex flex-col gap-3 my-10">
             <?php foreach ($faq_categories as $c): ?>
-                <div class="max-lg:p-4 lg:p-8">
+                <div class="max-lg:p-4 lg:p-8" id="<?= $c->slug ?>">
                     <h2 class="text-3xl font-bold"><?= $c->name ?></h2>
                     <div class="flex flex-col mt-5">
                         <?php

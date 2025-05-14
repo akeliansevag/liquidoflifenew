@@ -4,7 +4,7 @@
         <div class="mt-10 lg:flex lg:justify-end relative w-full rounded-xl overflow-hidden lg:py-32 lg:px-32 max-lg:py-10 max-lg:px-10">
             <img class="absolute -z-10 top-0 left-0 object-cover w-full h-full" src="<?= get_template_directory_uri() ?>/src/img/faq-bg.webp" alt="FAQ Background Image" />
             <div class="flex flex-col gap-5 lg:w-1/3">
-                <a href="/faqs" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
+                <a href="/faqs/#dispensers" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
                     <span>
                         Bottle-Free Dispensers
                     </span>
@@ -21,7 +21,7 @@
                     </span>
                 </a>
 
-                <a href="/faqs" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
+                <a href="/faqs/#under-the-sink-filtration-system" class="hover:opacity-80 bg-primary flex items-center justify-between rounded-xl px-5 py-4 text-white">
                     <span>
                         Under-The-Sink Filtration Systems
                     </span>

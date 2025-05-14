@@ -69,6 +69,10 @@ header.scrolled {
   @apply text-[#9F9F9F];
 }
 
+#form-popup .contact-form input[type="submit"] {
+  @apply bg-primary text-white border-0 hover:opacity-70 cursor-pointer mt-5;
+}
+
 .wpcf7-response-output {
   @apply !m-0 !border-none !p-0 text-center !pb-5;
 }
@@ -151,4 +155,36 @@ header.scrolled {
 
 .lol-button.active {
   @apply bg-primary text-white font-bold;
+}
+
+
+#form-popup {
+  @apply fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center -translate-x-full;
+}
+
+#form-popup.show {
+  @apply translate-x-0;
+}
+
+.form-popup-overlay {
+  @apply absolute top-0 left-0 w-full h-full bg-white/20 backdrop-blur-sm transition-all opacity-0;
+}
+
+.form-popup-box {
+  @apply bg-white relative rounded-3xl max-w-[1200px] w-full z-10 overflow-y-hidden mx-5 transition-all -translate-y-10;
+}
+.form-popup-content {
+  @apply overflow-y-auto max-h-[80vh];
+}
+
+#form-popup-close {
+  @apply absolute top-3 right-3 w-[30px] h-[30px] rounded-full bg-primary flex items-center justify-center cursor-pointer hover:opacity-80;
+}
+
+#form-popup.show .form-popup-overlay {
+  @apply opacity-100;
+}
+
+#form-popup.show .form-popup-box {
+  @apply translate-y-0;
 }
