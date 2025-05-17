@@ -18,11 +18,11 @@ $products = $query->posts;
                 <?php foreach ($products as $product): ?>
                     <div class="swiper-slide">
                         <div>
-                            <div class="h-[350px] py-6 px-7 rounded-2xl overflow-hidden w-full relative flex items-end">
+                            <div class="h-[500px] py-6 px-7 rounded-2xl overflow-hidden w-full relative flex items-end">
                                 <?=
                                 get_the_post_thumbnail(
                                     $product->ID,
-                                    'featured-small',
+                                    'content-medium',
                                     [
                                         'class' => 'absolute top-0 left-0 -z-10 object-cover w-full h-full'
                                     ]
