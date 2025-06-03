@@ -14,7 +14,7 @@
         <div class="form-popup-content">
             <div class="flex max-lg:flex-col">
                 <div class="lg:p-20 lg:pb-7 max-lg:py-14 max-lg:px-5 lg:w-2/3">
-                    <h2 class="font-bold mb-5 text-center max-lg:text-2xl lg:text-4xl text-balance">We Would love to hear from you!</h2>
+                    <h2 class="font-bold mb-5 max-lg:text-xl lg:text-2xl">Got a question or ready to make the switch to filtered water? Drop us a message – we’re here to help!</h2>
                     <div class="flex gap-4 mb-5 max-lg:flex-col">
                         <div id="form-residential" class="w-full active lol-button">
                             Residential

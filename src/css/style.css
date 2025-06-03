@@ -44,6 +44,10 @@ header.scrolled {
   @apply bg-white/90 backdrop-blur-sm shadow-sm;
 }
 
+header.scrolled .menu-wrapper {
+  @apply !bg-transparent;
+}
+
 .mobile-menu > li {
   @apply px-5 py-3 border-b opacity-70;
 }
@@ -157,7 +161,6 @@ header.scrolled {
   @apply bg-primary text-white font-bold;
 }
 
-
 #form-popup {
   @apply fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center -translate-x-full;
 }
@@ -187,4 +190,61 @@ header.scrolled {
 
 #form-popup.show .form-popup-box {
   @apply translate-y-0;
+}
+
+.text-image-description ul {
+  @apply flex flex-col gap-3;
+}
+.text-image-description ul li {
+  @apply flex items-center;
+}
+.text-image-description ul li:before {
+  @apply content-['✔'] text-primary w-5 h-5 text-xl border-[2px] pl-1 pb-3 flex border-primary rounded-full shrink-0 mr-3 leading-3;
+}
+.menu-wrapper > ul {
+  @apply h-full;
+}
+.menu-wrapper > ul > li {
+  @apply h-full items-center flex;
+}
+
+.menu-wrapper .menu-item-has-children {
+  @apply relative;
+}
+.menu-wrapper .menu-item-has-children > a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+
+  /* size of the icon */
+  width: 1.1em;
+  height: 1.1em;
+
+  /* use a small SVG of a chevron pointing down; 
+     the SVG uses ‘currentColor’ so it inherits the text color */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+PHBvbHlsaW5lIHBvaW50cz0nNiA5IDEyIDE1IDE4IDknIGZpbGw9J25vbmUnIHN0cm9rZT0nY3VycmVudENvbG9yJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcg c3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc+PC9wb2x5bGluZT48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu-wrapper ul.sub-menu {
+  @apply overflow-hidden transition-opacity opacity-0 w-max absolute -translate-y-[9999px] bg-primary/70 p-5 text-white top-full;
+}
+
+.menu-wrapper > ul > li:hover > ul.sub-menu {
+  @apply translate-y-0 opacity-100;
+}
+
+.menu-wrapper ul.sub-menu a {
+  @apply text-base;
+}
+
+#mobile-menu-content .menu-item-has-children > ul {
+  @apply pl-3 text-base;
+}
+
+footer .menu-item-has-children > ul {
+  @apply hidden;
 }

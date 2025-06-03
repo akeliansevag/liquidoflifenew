@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <div class="max-lg:hidden">
+            <div class="menu-wrapper max-lg:hidden bg-[#FFFFFF]/40 px-10 h-[50px] justify-center items-center flex font-bold rounded-xl">
                 <?php
                 wp_nav_menu([
                     'menu' => 'main-menu',

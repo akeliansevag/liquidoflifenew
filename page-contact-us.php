@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="rounded-2xl overflow-hidden my-10 h-[35vh]">
-            <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35241.86312194314!2d55.231229!3d25.049339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6fe1f1ef851d%3A0x92e94ffeafc3cec8!2sControl%20Tower!5e1!3m2!1sen!2sus!4v1737396493370!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.62120918583!2d55.227735676022455!3d25.04692583776971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x3e5f6fe1f1ef851d%3A0x92e94ffeafc3cec8!2sControl%20Tower!5e0!3m2!1sen!2slb!4v1748976620383!5m2!1sen!2slb" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="flex max-lg:flex-col items-center gap-10 border border-primary rounded-2xl lg:px-10 lg:py-10 max-lg:px-5 max-lg:py-5">
             <h3 class="section-title">Get In Touch</h3>

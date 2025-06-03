@@ -37,14 +37,14 @@ $products = $query->posts;
 
                                     <h3 class="text-lg text-white bg-primary rounded-lg py-1 px-3"><?= $product->post_title; ?></h3>
                                     <?php
-                                    $link = get_permalink(get_page_by_path('products'));
+
                                     $target = "_self";
                                     if (get_field('external_link', $product->ID)) {
                                         $link = get_field('external_link', $product->ID);
                                         $target = "_blank";
                                     }
                                     ?>
-                                    <a target="<?= $target ?>" class="bg-white hover:opacity-80 rounded-full w-[40px] h-[40px] flex items-center justify-center" href="<?= $link ?>#<?= $product->post_name ?>">
+                                    <a target="<?= $target ?>" class="bg-white hover:opacity-80 rounded-full w-[40px] h-[40px] flex items-center justify-center" href="<?= get_permalink($product->ID); ?>">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14.529" height="14.529" viewBox="0 0 14.529 14.529">
                                             <line id="Line_8" data-name="Line 8" y2="13.529" transform="translate(7.621 0.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1" />
                                             <line id="Line_9" data-name="Line 9" x2="13.529" transform="translate(0.5 7.621)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1" />
