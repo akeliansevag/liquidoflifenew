@@ -10,7 +10,7 @@
                 <?php endif; ?>
             </div>
             <div>
-                <a class="bg-white rounded-lg px-3 py-3 font-bold text-primary text-center" href="<?= $args['button']['url'] ?>" target="<?= $args['button']['target'] ?>"><?= $args['button']['title'] ?></a>
+                <a class="bg-white rounded-lg px-3 py-3 font-bold text-primary text-center whitespace-nowrap max-lg:text-sm" href="<?= $args['button']['url'] ?>" target="<?= $args['button']['target'] ?>"><?= $args['button']['title'] ?></a>
             </div>
         </div>
 
