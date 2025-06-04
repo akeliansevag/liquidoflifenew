@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="wrapper">
-		<a target="_blank" href="https://wa.me/971588574919" class="hover:opacity-70 fixed z-20 bottom-7 right-7">
+		<!-- <a target="_blank" href="https://wa.me/971588574919" class="hover:opacity-70 fixed z-20 bottom-7 right-7">
 			<svg class="w-[60px] h-[60px]" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				viewBox="0 0 512 512" xml:space="preserve">
 				<path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
@@ -43,7 +43,7 @@
 	c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
 	l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945" />
 			</svg>
-		</a>
+		</a> -->
 
 		<?php get_template_part("components/formPopup"); ?>
 		<?php get_template_part("components/mobileMenu"); ?>
