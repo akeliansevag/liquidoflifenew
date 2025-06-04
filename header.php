@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="wrapper">
-		<a target="_blank" href="https://wa.me/97143607064" class="hover:opacity-70 fixed z-20 bottom-7 right-7">
+		<a target="_blank" href="https://wa.me/0588574919" class="hover:opacity-70 fixed z-20 bottom-7 right-7">
 			<svg class="w-[60px] h-[60px]" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				viewBox="0 0 512 512" xml:space="preserve">
 				<path style="fill:#EDEDED;" d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
