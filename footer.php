@@ -20,7 +20,7 @@
                             </svg>
 
                         </a>
-                        <a target="_blank" href="https://wa.me/97143607064">
+                        <a target="_blank" href="https://wa.me/971555566067">
                             <svg id="Group_461" data-name="Group 461" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38.497" viewBox="0 0 38 38.497">
                                 <defs>
                                     <clipPath id="clip-path">
@@ -33,8 +33,8 @@
                             </svg>
 
                         </a>
-                        <a target="_blank" href="https://wa.me/97143607064">
-                            +97143607064
+                        <a target="_blank" href="https://wa.me/971555566067">
+                            +971555566067
                         </a>
                     </div>
                 </div>
@@ -73,7 +73,8 @@
     <div class="container">
         <div class="py-6 max-lg:text-center">
             <span>
-                Copyrights <?= date('Y') ?>. Liquid of Life
+                <!-- Copyrights <?= date('Y') ?>. Liquid of Life -->
+                Copyright &copy; <?= date('Y') ?> Liquid of Life. All rights reserved.
             </span>
         </div>
     </div>
