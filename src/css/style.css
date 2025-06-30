@@ -248,3 +248,7 @@ header.scrolled .menu-wrapper {
 footer .menu-item-has-children > ul {
   @apply hidden;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
