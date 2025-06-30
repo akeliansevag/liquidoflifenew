@@ -22,6 +22,27 @@
 		gtag('js', new Date());
 		gtag('config', 'AW-16971662538');
 	</script>
+
+	<script type="text/javascript" async defer>
+		(function(w, d, s, o, f, js, fjs) {
+			w[o] =
+				w[o] ||
+				function() {
+					(w[o].q = w[o].q || []).push(arguments);
+				};
+			(js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+			js.id = o;
+			js.src = f;
+			js.async = 1;
+			fjs.parentNode.insertBefore(js, fjs);
+		})(window, document, "script", "dt", "https://d3r49s2alut4u1.cloudfront.net/js/widget.js");
+		dt("init", {
+			crmWidgetId: "ccbba69b-a31f-45e5-a7b6-f6c3ce7f8fe2",
+			companyName: "Liquid of Life",
+			companyLogoUrl: "",
+			phoneNumber: "971588574919"
+		});
+	</script>
 	<?php wp_head(); ?>
 </head>
 
