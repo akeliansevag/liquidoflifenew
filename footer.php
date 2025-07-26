@@ -20,7 +20,7 @@
                             </svg>
 
                         </a>
-                        <a target="_blank" href="tel:9714360706">
+                        <a target="_blank" href="tel:97143607064">
                             <svg id="Group_461" data-name="Group 461" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38.497" viewBox="0 0 38 38.497">
                                 <defs>
                                     <clipPath id="clip-path">
@@ -33,7 +33,7 @@
                             </svg>
 
                         </a>
-                        <a target="_blank" href="tel:9714360706">
+                        <a target="_blank" href="tel:97143607064">
                             +97143607064
                         </a>
                     </div>

@@ -36,7 +36,7 @@
             <h3 class="section-title">Get In Touch</h3>
             <div class="flex lg:items-center max-lg:flex-col flex-wrap gap-10">
                 <div class="flex items-center gap-1">
-                    <a target="_blank" href="tel:9714360706">
+                    <a target="_blank" href="tel:97143607064">
                         <svg id="Group_466" data-name="Group 466" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" viewBox="0 0 45.88 46.481">
                             <defs>
                                 <clipPath id="clip-path">
@@ -50,13 +50,13 @@
 
 
                     </a>
-                    <a target="_blank" href="tel:9714360706">
+                    <a target="_blank" href="tel:97143607064">
                         +97143607064
                     </a>
                 </div>
 
                 <div class="flex items-center gap-1">
-                    <a target="_blank" href="tel:9714360706">
+                    <a target="_blank" href="tel:97143607064">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" viewBox="0 0 45.88 46">
                             <defs>
                                 <clipPath>
@@ -75,7 +75,7 @@
                     </a>
                 </div>
                 <div class="flex items-center gap-1">
-                    <a target="_blank" href="tel:9714360706">
+                    <a target="_blank" href="tel:97143607064">
                         <svg id="Group_471" data-name="Group 471" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" viewBox="0 0 46 46">
                             <defs>
                                 <clipPath>
