@@ -82,3 +82,28 @@ function dd($variable)
 	var_dump($variable);
 	echo '</pre>';
 }
+
+// Redirect single pages of specific CPTs to their archive pages
+add_action('template_redirect', function () {
+	// Replace with your CPT slugs
+	$blocked_types = ['faq', 'solution'];
+
+	// Only act on singles of those CPTs
+	if (is_singular($blocked_types)) {
+		// Prevent WordPress canonical redirect from interfering
+		remove_action('template_redirect', 'redirect_canonical');
+
+		$ptype = get_post_type();
+		$archive_url = get_post_type_archive_link($ptype);
+
+		// If archive exists, redirect there; else home as a fallback
+		if ($archive_url) {
+			// Use 301 if these URLs should *never* be single; otherwise 302 while testing
+			wp_safe_redirect($archive_url, 301);
+			exit;
+		} else {
+			wp_safe_redirect(home_url('/'), 302);
+			exit;
+		}
+	}
+}, 1);
